@@ -1,0 +1,20 @@
+<link rel="import" href="../ekg-progress.html">
+
+
+<dom-module id="ekg-progress-demo">
+    <template>
+        <style>
+        </style>
+        <containerz>
+            <ekg-progress></ekg-progress>
+        </containerz>
+    </template>
+    <script>
+        class EkgProgressDemo extends Polymer.Element {
+            static get is() {
+                return 'ekg-progress-demo';
+            }
+        }
+        window.customElements.define(EkgProgressDemo.is, EkgProgressDemo);
+    </script>
+</dom-module>

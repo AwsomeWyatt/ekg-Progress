@@ -1,0 +1,75 @@
+﻿<link rel="import" href="./bower_components/polymer/polymer.html">
+<link rel="import" href="./bower_components/polymer-decorators/polymer-decorators.html">
+<dom-module id="ekg-progress">
+    <template>
+        <style>
+            :host {
+                height: var(--ekg-progress-height, 5px);
+            }
+
+            line {
+                position: absolute;
+                opacity: 0.4;
+                background: var(--app-primary-color, #4a8df8);
+                width: 150%;
+                height: var(--ekg-progress-height, 5px);
+                @apply --ekg-progress-line-background;
+            }
+
+            subline-inc,
+            subline-dec {
+                position: absolute;
+                background: var(--paper-progress-active-color, #4a8df8);
+                height: var(--ekg-progress-height, 5px);
+            }
+
+            :host(:not([disabled])) subline-inc {
+                animation: increase 2s infinite;
+                -webkit-animation: increase 2s infinite;
+            }
+
+            :host(:not([disabled])) subline-dec {
+                animation: decrease 2s 0.5s infinite;
+                -webkit-animation: decrease 2s 0.5s infinite;
+            }
+
+            @keyframes dash {
+                to {
+                    stroke-dashoffset: -1200;
+                }
+            }
+
+
+            @keyframes fade {
+                0% {
+                    opacity: 1
+                }
+                20% {
+                    opacity: 0
+                }
+            }
+
+            svg {
+                margin: 0 -1rem
+            }
+
+            .ekg {
+                opacity: 1;
+                stroke-dasharray: 600;
+                stroke-dashoffset: 1200;
+                animation: dash 5.5s linear forwards infinite, fade 5.5s linear infinite;
+
+            }
+        </style>
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="-466.4 259.6 280.2 47.3" enable-background="new -466.4 259.6 280.2 47.3" xml:space="preserve">
+            <polyline fill="none" stroke="#379AE2" class="ekg" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points="-465.4,281 
+	-436,281 -435.3,280.6 -431.5,275.2 -426.9,281 -418.9,281 -423.9,281 -363.2,281 -355.2,269 -345.2,303 -335.2,263 -325.2,291 
+	-319.2,281 -187.2,281 " />
+        </svg>
+    </template>
+
+    <script type="text/javascript" src="./ekg-progress.js">
+    </script>
+
+</dom-module>

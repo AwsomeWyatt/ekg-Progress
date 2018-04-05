@@ -1,0 +1,31 @@
+{
+  "name": "titanium-toolbar-manager",
+  "version": "3.0.1",
+  "description": "",
+  "main": "titanium-toolbar-manager.html",
+  "dependencies": {},
+  "devDependencies": {
+    "tslint": "^4.0.2",
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "typescript": "2.4.1",
+    "bower": "*"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "postinstall": "bower install",
+    "lint": "tslint \"*.ts\"",
+    "build": "tsc",
+    "test": "npm run lint && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LssPolymerElements/titanium-toolbar-manager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LssPolymerElements/titanium-toolbar-manager/issues"
+  },
+  "homepage": "https://github.com/LssPolymerElements/titanium-toolbar-manager#readme"
+}
