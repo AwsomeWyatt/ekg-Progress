@@ -1,0 +1,34 @@
+﻿{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "es2016",
+      "dom",
+      "dom.iterable"
+    ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": true,
+    "declaration": false,
+    "sourceMap": true,
+    "noImplicitReturns": true,
+    "alwaysStrict": true,
+    "allowJs": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "removeComments": true
+  },
+  "compileOnSave": true,
+  "include": [
+    "src/**.ts"
+  ],
+  "exclude": [
+    "build",
+    "es5-build",
+    "node_modules",
+    "bower_components/**/test/*",
+    "bower_components/**/demo/*"
+  ]
+}
